@@ -117,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
+    <Compile Include="launch_screen.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Notification.cs" />
     <Compile Include="Renderers\ClickableStackLayoutRenderer.cs" />
@@ -281,6 +282,15 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\watermark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\colors.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\launchscreen.png" />
   </ItemGroup>
   <Import Project="..\Locknote\Locknote.projitems" Label="Shared" Condition="Exists('..\Locknote\Locknote.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

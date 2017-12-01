@@ -2386,32 +2386,32 @@ namespace Locknote.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b0048
-			public const int abc_background_cache_hint_selector_material_dark = 2131427400;
-			
 			// aapt resource value: 0x7f0b0049
-			public const int abc_background_cache_hint_selector_material_light = 2131427401;
+			public const int abc_background_cache_hint_selector_material_dark = 2131427401;
 			
 			// aapt resource value: 0x7f0b004a
-			public const int abc_color_highlight_material = 2131427402;
+			public const int abc_background_cache_hint_selector_material_light = 2131427402;
+			
+			// aapt resource value: 0x7f0b004b
+			public const int abc_color_highlight_material = 2131427403;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int abc_input_method_navigation_guard = 2131427332;
 			
-			// aapt resource value: 0x7f0b004b
-			public const int abc_primary_text_disable_only_material_dark = 2131427403;
-			
 			// aapt resource value: 0x7f0b004c
-			public const int abc_primary_text_disable_only_material_light = 2131427404;
+			public const int abc_primary_text_disable_only_material_dark = 2131427404;
 			
 			// aapt resource value: 0x7f0b004d
-			public const int abc_primary_text_material_dark = 2131427405;
+			public const int abc_primary_text_disable_only_material_light = 2131427405;
 			
 			// aapt resource value: 0x7f0b004e
-			public const int abc_primary_text_material_light = 2131427406;
+			public const int abc_primary_text_material_dark = 2131427406;
 			
 			// aapt resource value: 0x7f0b004f
-			public const int abc_search_url_text = 2131427407;
+			public const int abc_primary_text_material_light = 2131427407;
+			
+			// aapt resource value: 0x7f0b0050
+			public const int abc_search_url_text = 2131427408;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int abc_search_url_text_normal = 2131427333;
@@ -2422,11 +2422,11 @@ namespace Locknote.Droid
 			// aapt resource value: 0x7f0b0007
 			public const int abc_search_url_text_selected = 2131427335;
 			
-			// aapt resource value: 0x7f0b0050
-			public const int abc_secondary_text_material_dark = 2131427408;
-			
 			// aapt resource value: 0x7f0b0051
-			public const int abc_secondary_text_material_light = 2131427409;
+			public const int abc_secondary_text_material_dark = 2131427409;
+			
+			// aapt resource value: 0x7f0b0052
+			public const int abc_secondary_text_material_light = 2131427410;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int accent_material_dark = 2131427336;
@@ -2620,17 +2620,20 @@ namespace Locknote.Droid
 			// aapt resource value: 0x7f0b0039
 			public const int secondary_text_disabled_material_light = 2131427385;
 			
+			// aapt resource value: 0x7f0b0048
+			public const int splash_background = 2131427400;
+			
 			// aapt resource value: 0x7f0b003a
 			public const int switch_thumb_disabled_material_dark = 2131427386;
 			
 			// aapt resource value: 0x7f0b003b
 			public const int switch_thumb_disabled_material_light = 2131427387;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int switch_thumb_material_dark = 2131427410;
-			
 			// aapt resource value: 0x7f0b0053
-			public const int switch_thumb_material_light = 2131427411;
+			public const int switch_thumb_material_dark = 2131427411;
+			
+			// aapt resource value: 0x7f0b0054
+			public const int switch_thumb_material_light = 2131427412;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int switch_thumb_normal_material_dark = 2131427388;
@@ -3451,187 +3454,193 @@ namespace Locknote.Droid
 			public const int icon = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int MenuDiscard = 2130837650;
+			public const int launchscreen = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int MenuSave = 2130837651;
+			public const int MenuDiscard = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int mr_dialog_material_background_dark = 2130837652;
+			public const int MenuSave = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int mr_dialog_material_background_light = 2130837653;
+			public const int mr_dialog_material_background_dark = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int mr_ic_audiotrack_light = 2130837654;
+			public const int mr_dialog_material_background_light = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int mr_ic_cast_dark = 2130837655;
+			public const int mr_ic_audiotrack_light = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int mr_ic_cast_light = 2130837656;
+			public const int mr_ic_cast_dark = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int mr_ic_close_dark = 2130837657;
+			public const int mr_ic_cast_light = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int mr_ic_close_light = 2130837658;
+			public const int mr_ic_close_dark = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837659;
+			public const int mr_ic_close_light = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int mr_ic_media_route_connecting_mono_light = 2130837660;
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int mr_ic_media_route_mono_dark = 2130837661;
+			public const int mr_ic_media_route_connecting_mono_light = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int mr_ic_media_route_mono_light = 2130837662;
+			public const int mr_ic_media_route_mono_dark = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int mr_ic_pause_dark = 2130837663;
+			public const int mr_ic_media_route_mono_light = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int mr_ic_pause_light = 2130837664;
+			public const int mr_ic_pause_dark = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int mr_ic_play_dark = 2130837665;
+			public const int mr_ic_pause_light = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int mr_ic_play_light = 2130837666;
+			public const int mr_ic_play_dark = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int new_icon = 2130837667;
+			public const int mr_ic_play_light = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int notebook = 2130837668;
+			public const int new_icon = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int notebook_delete = 2130837669;
+			public const int notebook = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int notebook_delete_off = 2130837670;
+			public const int notebook_delete = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int notebook_new = 2130837671;
+			public const int notebook_delete_off = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int notebook_new_off = 2130837672;
-			
-			// aapt resource value: 0x7f0200ce
-			public const int notification_template_icon_bg = 2130837710;
+			public const int notebook_new = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int watermark = 2130837673;
+			public const int notebook_new_off = 2130837673;
+			
+			// aapt resource value: 0x7f0200d0
+			public const int notification_template_icon_bg = 2130837712;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ZSSbgcolor = 2130837674;
+			public const int splash = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ZSSbold = 2130837675;
+			public const int watermark = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ZSScenterjustify = 2130837676;
+			public const int ZSSbgcolor = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ZSSclearstyle = 2130837677;
+			public const int ZSSbold = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ZSSforcejustify = 2130837678;
+			public const int ZSScenterjustify = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ZSSh1 = 2130837679;
+			public const int ZSSclearstyle = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ZSSh2 = 2130837680;
+			public const int ZSSforcejustify = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ZSSh3 = 2130837681;
+			public const int ZSSh1 = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ZSSh4 = 2130837682;
+			public const int ZSSh2 = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ZSSh5 = 2130837683;
+			public const int ZSSh3 = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ZSSh6 = 2130837684;
+			public const int ZSSh4 = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ZSShorizontalrule = 2130837685;
+			public const int ZSSh5 = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ZSSimage = 2130837686;
+			public const int ZSSh6 = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ZSSindent = 2130837687;
+			public const int ZSShorizontalrule = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ZSSinsertkeyword = 2130837688;
+			public const int ZSSimage = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ZSSitalic = 2130837689;
+			public const int ZSSindent = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ZSSkeyboard = 2130837690;
+			public const int ZSSinsertkeyword = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ZSSleftjustify = 2130837691;
+			public const int ZSSitalic = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ZSSlink = 2130837692;
+			public const int ZSSkeyboard = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ZSSorderedlist = 2130837693;
+			public const int ZSSleftjustify = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ZSSoutdent = 2130837694;
+			public const int ZSSlink = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ZSSparagraph = 2130837695;
+			public const int ZSSorderedlist = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ZSSpicker = 2130837696;
+			public const int ZSSoutdent = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ZSSquicklink = 2130837697;
+			public const int ZSSparagraph = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ZSSredo = 2130837698;
+			public const int ZSSpicker = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ZSSrightjustify = 2130837699;
+			public const int ZSSquicklink = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ZSSstrikethrough = 2130837700;
+			public const int ZSSredo = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ZSSsubscript = 2130837701;
+			public const int ZSSrightjustify = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ZSSsuperscript = 2130837702;
+			public const int ZSSstrikethrough = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ZSStable = 2130837703;
+			public const int ZSSsubscript = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ZSStextcolor = 2130837704;
+			public const int ZSSsuperscript = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ZSSunderline = 2130837705;
+			public const int ZSStable = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ZSSundo = 2130837706;
+			public const int ZSStextcolor = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ZSSunlink = 2130837707;
+			public const int ZSSunderline = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ZSSunorderedlist = 2130837708;
+			public const int ZSSundo = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ZSSviewsource = 2130837709;
+			public const int ZSSunlink = 2130837709;
+			
+			// aapt resource value: 0x7f0200ce
+			public const int ZSSunorderedlist = 2130837710;
+			
+			// aapt resource value: 0x7f0200cf
+			public const int ZSSviewsource = 2130837711;
 			
 			static Drawable()
 			{
@@ -4988,6 +4997,9 @@ namespace Locknote.Droid
 			
 			// aapt resource value: 0x7f0a0173
 			public const int MainTheme_Base = 2131362163;
+			
+			// aapt resource value: 0x7f0a0176
+			public const int MyTheme_Splash = 2131362166;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int Platform_AppCompat = 2131361842;
