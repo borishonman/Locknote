@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This file is part of Locknote.
+    Locknote is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Locknote is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with Locknote.  If not, see
+    <http://www.gnu.org/licenses/> .
+-->
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ln="clr-namespace:Locknote.Custom_Views"
+            x:Class="Locknote.Views.TutorialPage">
+    <!--Pages can be added as references or inline-->
+    <ContentPage Title="Welcome">
+        <StackLayout>
+            <Label Text="Welcome to Locknote!" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" />
+            <Label Text="Press Next to continue" FontSize="Small" TextColor="DarkGray" HorizontalTextAlignment="Center" />
+            <ln:LNButton x:Name="btn_next" Text="Next" FontSize="16" HorizontalOptions="Center" Margin="20"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="What">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+                <Label Text="Secure, encrypted notetaking and document storage" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
+                <Label Text="* Take notes and have them automatically encrypted" FontSize="Medium" TextColor="DarkGray" Margin="0, 20, 0, 0"/>
+                <Label Text="* Store encrypted files as attachments to notes" FontSize="Medium" TextColor="DarkGray" />
+            </StackLayout>
+            <Label Text="Press Next to continue" FontSize="Small" TextColor="DarkGray" HorizontalTextAlignment="Center" />
+            <ln:LNButton x:Name="btn_next2" Text="Next" FontSize="16" HorizontalOptions="Center" Margin="20"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="How">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+                <Label Text="Locknote uses asymmetric key pair encryption" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
+                <Label Text="* Pair consists of 2 keys - a public key and a private key" FontSize="Medium" TextColor="DarkGray" Margin="0, 20, 0, 0"/>
+                <Label Text="* All data encrypted by public key" FontSize="Medium" TextColor="DarkGray" />
+                <Label Text="* Only the private key can decrypt your data" FontSize="Medium" TextColor="DarkGray" />
+                <Label Text="* Private key is protected by a password and stored on your device" FontSize="Medium" TextColor="DarkGray" />
+            </StackLayout>
+            <Label Text="Press Next to continue" FontSize="Small" TextColor="DarkGray" HorizontalTextAlignment="Center" />
+            <ln:LNButton x:Name="btn_next3" Text="Next" FontSize="16" HorizontalOptions="Center" Margin="20"/>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Start!">
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Margin="20">
+                <Label Text="Let's start!" FontSize="Large" TextColor="Black" HorizontalTextAlignment="Center" />
+                <Label Text="1. First Locknote will generate your key pair" FontSize="Medium" TextColor="DarkGray" Margin="0, 20, 0, 0"/>
+                <Label Text="2. Next you will enter a password to protect your private key" FontSize="Medium" TextColor="DarkGray" />
+                <Label Text="3. You're ready to go!" FontSize="Medium" TextColor="DarkGray" />
+            </StackLayout>
+            <Label Text="Press Begin Setup to continue" FontSize="Small" TextColor="DarkGray" HorizontalTextAlignment="Center" />
+            <ln:LNButton x:Name="btn_next4" Text="Begin Setup" FontSize="16" HorizontalOptions="Center" Margin="20"/>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

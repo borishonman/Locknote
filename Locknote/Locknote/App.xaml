@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This file is part of Locknote.
+    Locknote is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Locknote is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with Locknote.  If not, see
+    <http://www.gnu.org/licenses/> .
+-->
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Locknote.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="version">0.1b</x:String>
+            <Color x:Key="Primary">#b80c09</Color>
+            <Color x:Key="PrimaryDark">#780116</Color>
+            <Color x:Key="Secondary">#d8572a</Color>
+            <Color x:Key="Highlight1">#f7b538</Color>
+            <Color x:Key="Highlight2">#db7c26</Color>
+            <x:String x:Key="Folder_Notebooks">notebooks</x:String>
+            <x:String x:Key="MetadataFile">locknote_info.xml</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

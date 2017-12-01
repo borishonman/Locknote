@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This file is part of Locknote.
+    Locknote is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    Locknote is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with Locknote.  If not, see
+    <http://www.gnu.org/licenses/> .
+-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ln="clr-namespace:Locknote.Custom_Views"
+            x:Class="Locknote.Views.HomeMDPMaster"
+            Title="Menu">
+    <StackLayout>
+        <StackLayout x:Name="MenuItemsListView">
+            <Grid BackgroundColor="{DynamicResource Primary}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Label  Grid.Column="1"
+                        Grid.Row="1"
+                        Text="Locknote"
+                        TextColor="White"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        Style="{DynamicResource SubtitleStyle}"/>
+                <Label x:Name="lbl_version" TextColor="White" FontSize="Small" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="1" />
+            </Grid>
+            <ln:ClickableStackLayout x:Name="mst_lock_unlock" Text="Lock" Padding="10, 10, 0, 10"/>
+            <ln:ClickableStackLayout x:Name="mst_settings" Text="Settings" Padding="10, 10, 0, 10" />
+            <Label HeightRequest="5" BackgroundColor="DarkGray" />
+            <ln:ClickableStackLayout x:Name="mst_new_notebook" Text="New Notebook" Padding="10, 10, 0, 10" />
+            <Label Text="Notebooks" Margin="10, 10, 0, 0"/>
+            <Label HeightRequest="5" BackgroundColor="DarkGray" />
+            <ln:LNListView x:Name="lst_notebooks">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ln:LNListViewItem BindingContext="{Binding .}">
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="notebook.png" Scale="0.7" Margin="20, 0, 20, 0"/>
+                                    <Label Text="{Binding Title}" VerticalTextAlignment="Center" FontSize="Medium" TextColor="Black"/>
+                                </StackLayout>
+                            </ln:LNListViewItem>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ln:LNListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

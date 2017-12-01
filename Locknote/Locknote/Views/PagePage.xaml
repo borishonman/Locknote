@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Locknote.Views.PagePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="mnu_paragraph" Order="Primary" Text="Paragraph" Icon="paragraph_icon.png" />
+        <ToolbarItem x:Name="mnu_attach" Order="Primary" Text="Add Attachment" Icon="attachment_icon.png" />
+        <ToolbarItem x:Name="mnu_camera" Order="Primary" Text="Take Picture" Icon="camera_icon.png" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,6 @@
+[submodule "images"]
+	path = images
+	url = https://github.com/borishonman/locknote-graphics.git
+[submodule "libs"]
+	path = libs
+	url = https://github.com/borishonman/locknote-libraries.git

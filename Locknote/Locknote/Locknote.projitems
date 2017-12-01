@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>52b792f8-0af7-4306-835e-04cc326d47c5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Locknote</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNListViewItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNTapView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNWebView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\IConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\IStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Security\Crypto.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Filesystem\FileManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\INotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Security\Eraser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Filesystem\KeyManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\NoteManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Objects\Notebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Objects\Page.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Objects\Section.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LocknoteMgr.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Views\ClickableStackLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditNotebookPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PasswordPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Prompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TapRandomizer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TextEntryPrompt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TutorialPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FirstTimeSetup.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PasswordEntryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeMDP.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomeMDPMaster.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SectionsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PagesPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PageEditor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\HomePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TapRandomizer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\TutorialPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FirstTimeSetup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PasswordEntryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomeMDP.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomeMDPMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SectionsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PagesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\PageEditor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
