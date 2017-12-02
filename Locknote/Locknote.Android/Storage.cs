@@ -26,7 +26,10 @@ namespace Locknote.Droid
     {
         public string GetDirectory()
         {
-            return Path.Combine(Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "Android/data"), Application.Context.PackageName);
+            string path = Path.Combine(Path.Combine(Android.OS.Environment.ExternalStorageDirectory.AbsolutePath, "Android/data"), Application.Context.PackageName);
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+            return path;
         }
     }
 }
