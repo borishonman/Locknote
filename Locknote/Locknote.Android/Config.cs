@@ -57,5 +57,18 @@ namespace Locknote.Droid
                 m_prefsEditor.Commit();
             }
         }
+
+        public bool SaveOnSuspend
+        {
+            get
+            {
+                return m_prefs.GetBoolean("saveonsuspend", false);
+            }
+            set
+            {
+                m_prefsEditor.PutBoolean("saveonsuspend", value);
+                m_prefsEditor.Commit();
+            }
+        }
     }
 }

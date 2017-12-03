@@ -33,11 +33,13 @@ namespace Locknote.Views
 
             //initialize to the current settings
             chk_lock_on_suspend.IsToggled = m_config.LockOnSuspend;
+            chk_save_on_suspend.IsToggled = m_config.SaveOnSuspend;
 
             //set the button handlers
             btn_save.Clicked += new EventHandler((o, e) =>
             {
                 m_config.LockOnSuspend = chk_lock_on_suspend.IsToggled;
+                m_config.SaveOnSuspend = chk_save_on_suspend.IsToggled;
 
                 NotificationFactory.ShortAlert("Settings Saved!");
             });

@@ -92,9 +92,20 @@ namespace Locknote
 
 		protected override void OnSleep ()
 		{
-            //if editing a page, do a temp save so non-saved content is restored on resume
+            //is user currently editing a page?
             if (MainPage.GetType() == typeof(HomeMDP) && ((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage.GetType() == typeof(PageEditor))
-                ((PageEditor)((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage).TempSave();
+            {
+                //get the pageeditor
+                PageEditor pe = (PageEditor)((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage;
+                //do a temp save so non-saved content is restored on resume
+                pe.TempSave();
+                //check settings, save page if set
+                if (m_config.SaveOnSuspend)
+                {
+                    pe.SavePage(this, new EventArgs());
+                    NotificationFactory.ShortAlert("Page Saved!");
+                }
+            }
             //check settings, lock app if set
             if (m_config.LockOnSuspend)
                 LocknoteMgr.GetInstance().SecureErase();

@@ -30,7 +30,7 @@ namespace Locknote.Views
 
             m_pg = pg;
 
-            mnu_save.Clicked += Mnu_save_Clicked;
+            mnu_save.Clicked += SavePage;
 		}
 
         public void TempSave()
@@ -49,7 +49,7 @@ namespace Locknote.Views
             webview.Set_HTML(m_pg.Content);
         }
 
-        private void Mnu_save_Clicked(object sender, EventArgs e)
+        public void SavePage(object sender, EventArgs e)
         {
             webview.Get_HTML(new EventHandler((o, e2) =>
             {

@@ -30,5 +30,6 @@ namespace Locknote.Helpers
     {
         bool IsSetUp { get; set; }
         bool LockOnSuspend { get; set; }
+        bool SaveOnSuspend { get; set; }
     }
 }
