@@ -74,11 +74,15 @@ namespace Locknote.Views
             {
                 Notebook nb = (Notebook)o;
                 EditNotebookPrompt p = new EditNotebookPrompt() { Title = nb.Title, IsNavPage = true };
+                Xamarin.Forms.Page pg = ((NavigationPage)((HomeMDP)Application.Current.MainPage).Detail).CurrentPage;
                 p.OnPromptSaved += new Prompt.PromptClosedEventListener(() =>
                 {
                     nb.Title = p.Title;
+                    if (pg.GetType() == typeof(SectionsPage))
+                        pg.Title = p.Title + " | Sections";
                     LocknoteMgr.GetInstance().SaveNotebooks(true);
                     lst_notebooks.ItemsSource = LocknoteMgr.GetInstance().NoteManager.Notebooks;
+
                 });
                 p.DeleteClicked += new EventHandler((o2, e2) =>
                 {
