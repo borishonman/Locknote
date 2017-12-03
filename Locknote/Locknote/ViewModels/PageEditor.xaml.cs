@@ -33,6 +33,15 @@ namespace Locknote.Views
             mnu_save.Clicked += Mnu_save_Clicked;
 		}
 
+        public void TempSave()
+        {
+            webview.GetHTML(new EventHandler((o, e) => {}));
+        }
+        public void TempLoad()
+        {
+            webview.Reload_HTML();
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

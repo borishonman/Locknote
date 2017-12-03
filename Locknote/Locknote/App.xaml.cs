@@ -92,6 +92,9 @@ namespace Locknote
 
 		protected override void OnSleep ()
 		{
+            //if editing a page, do a temp save so non-saved content is restored on resume
+            if (MainPage.GetType() == typeof(HomeMDP) && ((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage.GetType() == typeof(PageEditor))
+                ((PageEditor)((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage).TempSave();
             //check settings, lock app if set
             if (m_config.LockOnSuspend)
                 LocknoteMgr.GetInstance().SecureErase();
@@ -99,6 +102,10 @@ namespace Locknote
 
 		protected override void OnResume ()
 		{
+            //if editing a page, do a temp save so non-saved content is restored on resume
+            if (MainPage.GetType() == typeof(HomeMDP) && ((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage.GetType() == typeof(PageEditor))
+                ((PageEditor)((NavigationPage)((HomeMDP)MainPage).Detail).CurrentPage).TempLoad();
+
             //if set to lock on suspend, need to follow normal resume process
             if (m_config.LockOnSuspend)
                 ResumeApp();

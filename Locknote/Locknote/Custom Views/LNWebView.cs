@@ -51,6 +51,11 @@ namespace Locknote.Custom_Views
                 SetHTML(html);
         }
 
+        public void Reload_HTML()
+        {
+            SetHTML(m_html);
+        }
+
         public string HTML
         {
             get
