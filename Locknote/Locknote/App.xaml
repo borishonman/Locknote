@@ -18,7 +18,7 @@
              x:Class="Locknote.App">
 	<Application.Resources>
         <ResourceDictionary>
-            <x:String x:Key="version">0.2b</x:String>
+            <x:String x:Key="version">0.3b</x:String>
             <Color x:Key="Primary">#b80c09</Color>
             <Color x:Key="PrimaryDark">#780116</Color>
             <Color x:Key="Secondary">#d8572a</Color>
