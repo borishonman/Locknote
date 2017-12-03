@@ -19,6 +19,7 @@ using Locknote.Views;
 using Locknote.Helpers;
 using Locknote.ViewModels;
 using System.IO;
+using System.Text;
 
 namespace Locknote
 {
@@ -194,7 +195,47 @@ namespace Locknote
                 //private key decrypted, start the app normally
                 StartAppFinal();
             });
-            p.Show();
+            //check if fingerprint auth is enabled
+            if (m_config.UseFingerprint && m_config.EncryptedPassword.Length > 1)
+            {
+                //prompt for fingerprint
+                IFingerprint fp = FingerprintFactory.GetInstance();
+                fp.InitReader();
+                if (fp.IsReady())
+                {
+                    Application.Current.MainPage = new FingerprintPage(new EventHandler((oo, ee) =>
+                    {
+                        byte[] data = (byte[])oo; //page returns the decrypted password
+
+                        //go to password entry if skipped
+                        if (data == null)
+                        {
+                            p.Show();
+                            return;
+                        }
+
+                        //decrypt the password
+                        string pass = Encoding.UTF8.GetString(data);
+
+                        //attempt to decrypt the private key
+                        if (!m_ln.DecryptPrivateKey(pass))
+                        { //decryption failed
+                            return;
+                        }
+
+                        //erase the decrypted password
+                        Eraser.SecureErase(pass);
+                        p.Password = "";
+
+                        //private key decrypted, start the app normally
+                        StartAppFinal();
+                    }), fp, "");
+                }
+            }
+            else
+            {
+                p.Show();
+            }
         }
     }
 }

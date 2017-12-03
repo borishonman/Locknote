@@ -177,7 +177,7 @@ namespace Locknote.ViewModels
 
         public void Show(NavigationPage page)
         {
-            Show(page);
+            Show((Page)page);
         }
 
         public void Dismiss()

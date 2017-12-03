@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNTapView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Custom Views\LNWebView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\IConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\IFingerprint.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\IStorage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Security\Crypto.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Filesystem\FileManager.cs" />
@@ -67,6 +68,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FingerprintPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
@@ -105,7 +109,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\cross_platform\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\Security\" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FingerprintPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

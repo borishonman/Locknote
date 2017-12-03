@@ -16,6 +16,7 @@ using Android.Content;
 
 using Locknote.Helpers;
 using Locknote.Droid;
+using System;
 
 [assembly: Xamarin.Forms.Dependency(typeof(ConfigAndroid))]
 namespace Locknote.Droid
@@ -67,6 +68,55 @@ namespace Locknote.Droid
             set
             {
                 m_prefsEditor.PutBoolean("saveonsuspend", value);
+                m_prefsEditor.Commit();
+            }
+        }
+
+        public bool UseFingerprint
+        {
+            get
+            {
+                return m_prefs.GetBoolean("usefingerprint", false);
+            }
+            set
+            {
+                m_prefsEditor.PutBoolean("usefingerprint", value);
+                m_prefsEditor.Commit();
+            }
+        }
+
+        public byte[] EncryptedPassword
+        {
+            get
+            {
+                string def = BitConverter.ToString(new byte[] { 0 });
+                string val = m_prefs.GetString("encpasswd", def);
+                String[] arr = val.Split('-');
+                byte[] array = new byte[arr.Length];
+                for (int i = 0; i < arr.Length; i++) array[i] = Convert.ToByte(arr[i], 16);
+                return array;
+            }
+            set
+            {
+                m_prefsEditor.PutString("encpasswd", BitConverter.ToString(value));
+                m_prefsEditor.Commit();
+            }
+        }
+
+        public byte[] EncryptedPasswordIV
+        {
+            get
+            {
+                string def = BitConverter.ToString(new byte[] { 0 });
+                string val = m_prefs.GetString("encpasswdiv", def);
+                String[] arr = val.Split('-');
+                byte[] array = new byte[arr.Length];
+                for (int i = 0; i < arr.Length; i++) array[i] = Convert.ToByte(arr[i], 16);
+                return array;
+            }
+            set
+            {
+                m_prefsEditor.PutString("encpasswdiv", BitConverter.ToString(value));
                 m_prefsEditor.Commit();
             }
         }

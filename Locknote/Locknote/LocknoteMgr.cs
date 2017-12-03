@@ -62,7 +62,7 @@ namespace Locknote
                 return false;
 
             //erase the encrypted data
-            Eraser.SecureErase(m_encPrivKey);
+            //Eraser.SecureErase(m_encPrivKey);
 
             return true;
         }

@@ -174,24 +174,28 @@ namespace Locknote.Helpers
             //hash the password using SHA256
             byte[] hashedPassword = HashString(password);
 
+            return EncryptKey(key, hashedPassword);
+        }
+
+        public static byte[] EncryptKey(byte[] key, byte[] password)
+        {
             //append a magic key to the key so we know if it was decrypted sucessfully
             byte[] concatenatedKey = (new byte[] { 39, 39, 39 }).Concat(key).ToArray();
 
             //create the cipher and parameter for the generator
             PaddedBufferedBlockCipher pbbc = new PaddedBufferedBlockCipher(new AesEngine());
-            KeyParameter aesKey = new KeyParameter(hashedPassword);
+            KeyParameter aesKey = new KeyParameter(password);
             pbbc.Init(true, aesKey);
 
             //create the output buffer
             byte[] encryptedKey = new byte[pbbc.GetOutputSize(concatenatedKey.Length)];
             //do the encryption
-            int bytesWritten = pbbc.ProcessBytes(concatenatedKey, encryptedKey, 0);
+            int bytesWritten = pbbc.ProcessBytes(concatenatedKey, 0, concatenatedKey.Length, encryptedKey, 0);
             pbbc.DoFinal(encryptedKey, bytesWritten);
 
             //erase the unencrypted data
             Eraser.SecureErase(key);
             Eraser.SecureErase(password);
-            Eraser.SecureErase(hashedPassword);
             Eraser.SecureErase(concatenatedKey);
 
             return encryptedKey;
@@ -202,9 +206,14 @@ namespace Locknote.Helpers
             //hash the password using SHA256
             byte[] hashedPassword = HashString(password);
 
+            return DecryptKey(encKey, hashedPassword);
+        }
+
+        public static byte[] DecryptKey(byte[] encKey, byte[] password)
+        {
             //create the cipher and parameter for setting up the generator
             PaddedBufferedBlockCipher pbbc = new PaddedBufferedBlockCipher(new AesEngine());
-            KeyParameter aesKey = new KeyParameter(hashedPassword);
+            KeyParameter aesKey = new KeyParameter(password);
             pbbc.Init(false, aesKey);
 
             //create the output buffer

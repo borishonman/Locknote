@@ -25,6 +25,9 @@ using Org.BouncyCastle.X509;
 using Org.BouncyCastle.Asn1.X509;
 using System.IO;
 
+using Locknote.ViewModels;
+using System.Text;
+
 namespace Locknote.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -62,9 +65,31 @@ namespace Locknote.Views
                 //erase the data
                 Eraser.SecureErase(encPrivKey);
 
-                //trigger the setup complete event
-                if (OnSetupComplete != null)
-                    OnSetupComplete(this, new EventArgs());
+                //ask if the user wants to use a fingerprint
+                IFingerprint fp = FingerprintFactory.GetInstance();
+                fp.InitReader();
+                if (fp.IsReady())
+                {
+                    Application.Current.MainPage = new FingerprintPage(new EventHandler((oo, ee) =>
+                    {
+                        byte[] data = (byte[])oo; //page returns the encrypted password
+                        if (data != null)
+                        { //only if was not skipped
+                            //encrypt the password and save it
+                            ConfigFactory.GetInstance().EncryptedPassword = data;
+                            ConfigFactory.GetInstance().UseFingerprint = true;
+                        }
+                        else
+                        {
+                            ConfigFactory.GetInstance().EncryptedPassword = new byte[] { 0 };
+                            ConfigFactory.GetInstance().UseFingerprint = false;
+                        }
+                        //trigger the setup complete event
+                        if (OnSetupComplete != null)
+                            OnSetupComplete(this, new EventArgs());
+
+                    }), fp, pep.Text);
+                }
             });
 
             //create the activity indicator layout

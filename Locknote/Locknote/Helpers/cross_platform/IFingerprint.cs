@@ -19,19 +19,18 @@ using Xamarin.Forms;
 
 namespace Locknote.Helpers
 {
-    class ConfigFactory
+    public class FingerprintFactory
     {
-        public static IConfig GetInstance()
+        public static IFingerprint GetInstance()
         {
-            return DependencyService.Get<IConfig>();
+            return DependencyService.Get<IFingerprint>();
         }
     }
-    interface IConfig
+    public interface IFingerprint
     {
-        bool IsSetUp { get; set; }
-        bool LockOnSuspend { get; set; }
-        bool SaveOnSuspend { get; set; }
-        bool UseFingerprint { get; set; }
-        byte[] EncryptedPassword { get; set; }
+        void InitReader();
+        bool IsReady();
+        void CancelFingerprint();
+        void GetFingerprint(EventHandler evt, bool encrypt, byte[] data);
     }
 }

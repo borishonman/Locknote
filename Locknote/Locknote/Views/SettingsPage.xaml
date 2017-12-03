@@ -32,6 +32,9 @@
 
                 <Label Text="Save current page on app suspend" Grid.Row="2" Grid.Column="0" />
                 <Switch x:Name="chk_save_on_suspend" Grid.Row="2" Grid.Column="1" />
+
+                <Label Text="Unlock with fingerprint" Grid.Row="3" Grid.Column="0" />
+                <Switch x:Name="chk_fingerprint" Grid.Row="3" Grid.Column="1" />
             </Grid>
             <Label VerticalOptions="FillAndExpand" />
             <ln:LNButton x:Name="btn_save" Text="Save Settings" VerticalOptions="End" />
