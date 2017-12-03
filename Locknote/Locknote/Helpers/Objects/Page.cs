@@ -18,11 +18,14 @@ using System.Text;
 using System.IO;
 using System.Xml;
 using Org.BouncyCastle.Crypto;
+using System.ComponentModel;
 
 namespace Locknote.Helpers.Objects
 {
-    public class Page
+    public class Page : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private string m_id;
         private string m_path; //directory the page lives in
         private string m_title;
@@ -34,6 +37,14 @@ namespace Locknote.Helpers.Objects
             m_content = "";
             m_path = path;
             m_id = id;
+        }
+
+        private void NotifyPropertyChanged(String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
         public void Save(AsymmetricCipherKeyPair keypair)
@@ -121,6 +132,7 @@ namespace Locknote.Helpers.Objects
             set
             {
                 m_title = value;
+                NotifyPropertyChanged("Title");
             }
         }
 

@@ -53,7 +53,7 @@ namespace Locknote.Views
                 {
                     pg.Title = p.Title;
                     LocknoteMgr.GetInstance().SaveNotebooks(true);
-                    listview.ItemsSource = sec.Pages;
+                    listview.ItemsSource = m_sec.Pages;
                 });
                 p.DeleteClicked += new EventHandler((o2, e2) =>
                 {
