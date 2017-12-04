@@ -90,6 +90,12 @@ namespace Locknote.Views
 
                     }), fp, pep.Text);
                 }
+                else
+                {
+                    //trigger the setup complete event
+                    if (OnSetupComplete != null)
+                        OnSetupComplete(this, new EventArgs());
+                }
             });
 
             //create the activity indicator layout
